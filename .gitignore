@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+whitelistdapps-frontend/node_modules
+whitelistdapps-frontend/.pnp
+whitelistdapps-frontend/.pnp.js
+
+# testing
+whitelistdapps-frontend/coverage
+
+# production
+whitelistdapps-frontend/build
+
+# misc
+whitelistdapps-frontend/.DS_Store
+whitelistdapps-frontend/.env.local
+whitelistdapps-frontend/.env.development.local
+whitelistdapps-frontend/.env.test.local
+whitelistdapps-frontend/.env.production.local
+
+whitelistdapps-frontend/npm-debug.log*
+whitelistdapps-frontend/yarn-debug.log*
+whitelistdapps-frontend/yarn-error.log*

@@ -1,0 +1,133 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.424);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.aletr {
+  background-color: #fff;
+  width: 70%;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+}
+
+.aletr img {
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+@media only screen and (max-width: 790px) {
+  .form-page-container {
+    color: #000;
+    width: 100%;
+  }
+
+  .tab {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-block: 30px;
+    border-bottom: 1px solid #000;
+  }
+
+  .tab-item {
+    padding-block: 10px;
+    padding-inline: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .tab-item:hover {
+    border-bottom: 3px solid #000;
+  }
+
+  .tab-item-active {
+    border-bottom: 3px solid #000;
+  }
+}
+
+@media only screen and (min-width: 791px) {
+  .form-page-container {
+    color: #000;
+    width: 40%;
+  }
+
+  .tab {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-block: 30px;
+    border-bottom: 1px solid #000;
+    width: stretch;
+  }
+
+  .tab-item {
+    padding-block: 10px;
+    padding-inline: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .tab-item:hover {
+    border-bottom: 3px solid #000;
+  }
+
+  .tab-item-active {
+    border-bottom: 3px solid #000;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  margin-block-start: 20px;
+}
+
+.left-arrow {
+  cursor: pointer;
+  fill: #000;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.form-input {
+  width: 90%;
+  height: 30px;
+  margin-block: 10px;
+}
+
+.text-area-input {
+  width: 90%;
+  height: 80px;
+  resize: none;
+  border-radius: 3px;
+  margin-block: 10px;
+}
+
+.form-button {
+  width: 90%;
+  height: 40px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-block: 10px;
+  -webkit-tap-highlight-color: transparent;
+  font-weight: bold;
+}
+
+.form-button:disabled {
+  background-color: #0077ff4d;
+}

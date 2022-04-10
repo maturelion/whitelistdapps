@@ -1,0 +1,25 @@
+services:
+  frontend:
+    build:
+      context: ./whitelistdapps-frontend
+    command: yarn start
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./whitelistdapps-frontend:/usr/src/frontend
+  # webapp:
+  #   build:
+  #     context: ./webapp
+  #   command: yarn start
+  #   ports:
+  #     - "3001:3000"
+  #   volumes:
+  #     - ./webapp:/usr/src/webapp
+  # backend:
+  #   build:
+  #     context: ./backend
+  #   command: python3 manage.py runserver 0.0.0.0:8000
+  #   volumes:
+  #     - ./backend:/usr/src/backend
+  #   ports:
+  #     - "8000:8000"
