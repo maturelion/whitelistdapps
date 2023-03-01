@@ -30,10 +30,12 @@ COPY requirements.txt /backend/
 RUN pip install -r requirements.txt
 
 
-COPY /backend/.env /backend/backend/.env
+COPY .env /backend/.env
 
 COPY . /backend/
 RUN python manage.py makemigrations
 RUN python manage.py migrate
 
-CMD ["gunicorn", "--workers", "3", "backend.wsgi:application"]
+EXPOSE 8000
+
+CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "backend.wsgi"]
