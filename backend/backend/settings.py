@@ -22,13 +22,13 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["*"]
 
 # DEFAULT_EMAIL_ENV = f"smtp://apikey:{env('SENDGRID_API_KEY')}@smtp.sendgrid.net:587"
-# EMAIL_CONFIG = env.email_url("EMAIL_URL")
+EMAIL_CONFIG = env.email_url("EMAIL_URL")
 
-# vars().update(EMAIL_CONFIG)
-# DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+vars().update(EMAIL_CONFIG)
+DEFAULT_FROM_EMAIL = env("SERVER_EMAIL")
 
 
-# ADMINS = getaddresses([env("DJANGO_ADMINS")])
+ADMINS = getaddresses([env("ADMINS")])
 
 
 # Application definition

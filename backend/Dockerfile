@@ -1,6 +1,6 @@
 FROM python:3.9.6-alpine3.14
 
-WORKDIR /backend
+WORKDIR /usr/src/backend
 
 RUN python -m pip install --upgrade pip setuptools wheel
 RUN apk add --update \
@@ -26,15 +26,15 @@ RUN apk add --update \
 # openssl-dev \
 # cargo
 
-COPY requirements.txt /backend/
+COPY requirements.txt /usr/src/backend/
 RUN pip install -r requirements.txt
 
 
-COPY .env /backend/.env
+COPY .env /usr/src/backend/.env
 
-COPY . /backend/
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+COPY . /usr/src/backend/
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
 EXPOSE 8000
 
