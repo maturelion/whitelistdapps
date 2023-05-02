@@ -34,7 +34,7 @@ COPY .env /usr/src/backend/.env
 
 COPY . /usr/src/backend/
 # RUN python manage.py makemigrations
-RUN python -m manage.py migrate
+# RUN python manage.py migrate
 
 EXPOSE 8000
 
