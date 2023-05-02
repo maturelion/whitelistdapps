@@ -22,7 +22,13 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["*"]
 
 # DEFAULT_EMAIL_ENV = f"smtp://apikey:{env('SENDGRID_API_KEY')}@smtp.sendgrid.net:587"
-EMAIL_CONFIG = env.email_url("EMAIL_URL")
+# EMAIL_CONFIG = env.email_url("EMAIL_URL")
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'maturelion1@gmail.com'
+EMAIL_HOST_PASSWORD = 'twcrurbynvhwioxe'
+EMAIL_PORT = 587
 
 vars().update(EMAIL_CONFIG)
 DEFAULT_FROM_EMAIL = env("SERVER_EMAIL")
