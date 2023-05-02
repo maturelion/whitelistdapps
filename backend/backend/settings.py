@@ -30,7 +30,7 @@ EMAIL_HOST_USER = 'maturelion1@gmail.com'
 EMAIL_HOST_PASSWORD = 'twcrurbynvhwioxe'
 EMAIL_PORT = 587
 
-vars().update(EMAIL_CONFIG)
+# vars().update(EMAIL_CONFIG)
 DEFAULT_FROM_EMAIL = env("SERVER_EMAIL")
 
 
