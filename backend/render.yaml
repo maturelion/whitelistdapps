@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: whitelistdapps
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "daphne -b 0.0.0.0 backend.asgi:application"
+    envVars:
+      - key: WEB_CONCURRENCY
+        value: 4
