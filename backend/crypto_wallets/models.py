@@ -18,6 +18,7 @@ class CryptoWallets(models.Model):
 
     class Meta:
         verbose_name_plural = "cryptowallets"
+        ordering = ["-created"]
 
     def __str__(self):
         return self.wallet_name
